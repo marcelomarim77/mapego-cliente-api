@@ -11,6 +11,7 @@ export class AppService {
         const result = await this.clienteRepository.findClientes(id);
         return result;
     };
+
     async getClienteById(id: number) {
         const result = await this.clienteRepository.findClienteById(id);
         return result;

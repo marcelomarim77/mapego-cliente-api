@@ -28,7 +28,7 @@ export class AppController {
     }
 
     @Post('/id/0')
-    async createHero(@Body() cliente: Cliente) {
+    async createCliente(@Body() cliente: Cliente) {
         return this.appService.createCliente(cliente);
     }
   

@@ -8,8 +8,8 @@ export class AppService {
 
     constructor(private readonly clienteRepository: ClienteRepository) {}
 
-    async getClientes(id: number) {
-        const result = await this.clienteRepository.findClientes(id);
+    async getClientesByIdEmpresa(idEmpresa: number) {
+        const result = await this.clienteRepository.findClientesByIdEmpresa(idEmpresa);
         return result;
     };
 

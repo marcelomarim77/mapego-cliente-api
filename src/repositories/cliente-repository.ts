@@ -8,7 +8,7 @@ export class ClienteRepository extends Repository<Cliente> {
         return await this.findOne({ idCliente: id });
     };
 
-    async findClientes(idEmpresaParam: number) {
+    async findClientesByIdEmpresa(idEmpresaParam: number) {
         return await getConnection()
             .createQueryBuilder()
             .select("cl")
@@ -32,7 +32,7 @@ export class ClienteRepository extends Repository<Cliente> {
                 .insert()
                 .into(Cliente)
                 .values([
-                    { idEmpresa: 1,
+                    { idEmpresa: cliente.idEmpresa,
                       pessoa: cliente.pessoa,
                       cpfCnpj: cliente.cpfCnpj,
                       rgIe: cliente.rgIe,

@@ -7,8 +7,8 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
     @Get('/idEmpresa/:id')
-    async getClientes(@Param('id') id: number) {
-        return this.appService.getClientes(id);
+    async getClientesByIdEmpresa(@Param('id') id: number) {
+        return this.appService.getClientesByIdEmpresa(id);
     }
 
     @Get('/id/:id')

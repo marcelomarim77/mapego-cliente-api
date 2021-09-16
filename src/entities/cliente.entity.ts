@@ -29,7 +29,7 @@ export class Cliente {
     @Column({
         name: 'cpf_cnpj',
         type: 'char',
-        length: 14,
+        length: 18,
     })
     cpfCnpj: string;
 
@@ -64,7 +64,7 @@ export class Cliente {
     @Column({
         name: 'cep',
         type: 'char',
-        length: 8,
+        length: 9,
     })
     cep: string;
 
